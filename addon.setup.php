@@ -17,7 +17,7 @@ return array(
       'author'      => 'Richard Whitmer',
       'author_url'  => 'https://github.com/panchesco',
       'name'        => 'Good at Statuses',
-      'description' => 'Display the status in a status group',
+      'description' => 'Make status group data available in templates.',
       'version'     => '1.0.0',
       'namespace'   => 'EllisLab\ExpressionEngine\Model\Status',
 );
