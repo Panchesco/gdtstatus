@@ -8,7 +8,7 @@
  * @copyright      Copyright (c) 2016, Richard Whitmer
  * @link           https://github.com/panchesco/gdtstatus
  * @license        MIT
- * @version        1.2.2
+ * @version        1.2.3
  * @filesource     gdtstatus/plugin.gdtstatus.php
  */
 
@@ -83,11 +83,13 @@ class Gdtstatus
 			*/
 			public function unslug() 
 			{
+				$separator	= ee()->TMPL->fetch_param('separator',"-");
+				
 				if(ee()->TMPL->fetch_param('slug')) 
 				{
-					return str_replace(array('-','_'),' ',ee()->TMPL->fetch_param('slug')); 
+					return str_replace($separator,' ',ee()->TMPL->fetch_param('slug')); 
 				} else {
-					return str_replace(array('-','_'),' ',ee()->TMPL->tagdata); 
+					return str_replace($separator,' ',ee()->TMPL->tagdata); 
 				}	
 			}
 				
