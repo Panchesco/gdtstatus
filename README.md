@@ -2,10 +2,6 @@
 
 Make status group data available in ExpressionEngine templates.
 
-##About
-
-I'm getting the hang of the new Add-on architecture in EE3. Today it was [Fetching Models](https://docs.expressionengine.com/latest/development/services/model/fetching.html). Here's a simple plugin that fetches a channel status group and let's you output the results in your templates.
-
 ##Usage
 
 ###Tag Pairs
@@ -27,6 +23,7 @@ There's just the one:
 {group_name}<br> 
 {status_id}<br>
 {status}<br>
+{slug}</br>
 {status_order}<br>
 {highlight}
 
@@ -34,7 +31,7 @@ There's just the one:
 ```
 {exp:gdtstatus:group group_name="Blog" exclude="draft|open|closed"}
 {if count==1}<ul>{/if}
-	<li>{status}</li>
+	<li><a href="{path="group"}/{slug}">{status}</a></li>
 {if count==total_results}</ul>{/if}
 {/exp:gdtstatus:group}
 ```
