@@ -28,6 +28,7 @@ You can also wrap tagdata in an unslug tag pair.
 | exclude | The statuses as pipe delimited list | | 
 | group_sort | Sort order for Status Group names | ASC | ASC, DESC
 | status_sort | Sort order for Statuses using native status_order property | ASC | ASC, DESC
+| separator | Character to use as separator in returned slug variable | - |
 
 ####Variables
 {group_id}<br>
