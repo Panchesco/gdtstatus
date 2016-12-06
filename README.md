@@ -13,6 +13,7 @@ Replaces dashes and underscores in tagdata with a whitespace.
 | Parameter | Description |Default|Options
 | --- | --- | --- | --- |
 | slug | The string to act on |  | 
+| separator | Character used as separator in slugs | - |
 
 You can also wrap tagdata in an unslug tag pair.
 
