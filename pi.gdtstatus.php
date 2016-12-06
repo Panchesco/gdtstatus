@@ -8,7 +8,7 @@
  * @copyright      Copyright (c) 2016, Richard Whitmer
  * @link           https://github.com/panchesco/gdtstatus
  * @license        MIT
- * @version        1.0.0
+ * @version        1.1.0
  * @filesource     gdtstatus/plugin.gdtstatus.php
  */
  
@@ -65,6 +65,7 @@ class Gdtstatus
 									'group_name'	=> $group->group_name,
 									'site_id'		=> $group->site_id,
 									'status'		=> $status->status,
+									'slug'		=> preg_replace("/[^[:alnum:]-_]/","-",strtolower($status->status)),
 									'status_order'	=> $status->status_order,
 									'highlight'	=> $status->highlight
 					);
