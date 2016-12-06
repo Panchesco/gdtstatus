@@ -8,7 +8,7 @@
  * @copyright      Copyright (c) 2016, Richard Whitmer
  * @link           https://github.com/panchesco/gdtstatus
  * @license        MIT
- * @version        1.2.0
+ * @version        1.2.1
  * @filesource     gdtstatus/plugin.gdtstatus.php
  */
  
@@ -81,12 +81,17 @@ class Gdtstatus
 			//-----------------------------------------------//
 			
 			/**
-			 * Returns string with underscores and dashes replaces with white space.
+			 * Returns string with underscores and dashes replaced with white space.
 			 *
 			*/
 			public function unslug() 
 			{
-				return str_replace(array('-','_'),' ',ee()->TMPL->tagdata); 	
+				if(ee()->TMPL->fetch_param('slug')) 
+				{
+					return str_replace(array('-','_'),' ',ee()->TMPL->fetch_param('slug')); 
+				} else {
+					return str_replace(array('-','_'),' ',ee()->TMPL->tagdata); 
+				}	
 			}
 				
 			//-----------------------------------------------//
