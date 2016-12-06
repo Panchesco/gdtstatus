@@ -4,6 +4,18 @@ Make status group data available in ExpressionEngine templates.
 
 ##Usage
 
+###Tags
+
+```{exp:gdtstatus:unslug}```
+
+Replaces dashes and underscores in tagdata with a whitespace.
+####Parameters
+| Parameter | Description |Default|Options
+| --- | --- | --- | --- |
+| slug | The string to act on |  | 
+
+You can also wrap tagdata in an unslug tag pair.
+
 ###Tag Pairs
 
 ```{exp:gdtstatus:group}```
@@ -35,6 +47,3 @@ Make status group data available in ExpressionEngine templates.
 {/exp:gdtstatus:group}
 ```
 
-```{exp:gdtstatus:unslug}```
-
-Replaces dashes and underscores in tagdata with a whitespace.
