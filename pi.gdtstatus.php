@@ -8,7 +8,7 @@
  * @copyright      Copyright (c) 2016, Richard Whitmer
  * @link           https://github.com/panchesco/gdtstatus
  * @license        MIT
- * @version        1.2.3
+ * @version        1.2.4
  * @filesource     gdtstatus/plugin.gdtstatus.php
  */
 
@@ -31,6 +31,7 @@ class Gdtstatus
 				$status_sort 	= ee()->TMPL->fetch_param('status_sort','ASC');
 				$exclude 		= ee()->TMPL->fetch_param('exclude');
 				$separator	= ee()->TMPL->fetch_param('separator',"-");
+				$limit		= ee()->TMPL->fetch_param('limit',100);
 				
 				
 				if($group_id !== FALSE || $group_name !== FALSE)
@@ -38,6 +39,7 @@ class Gdtstatus
 					$statuses = ee('Model')
 						->get('Status as s')
 						->with('StatusGroup as sg')
+						->limit($limit)
 						->fields('sg.group_name',
 								'status',
 								'status_order',
