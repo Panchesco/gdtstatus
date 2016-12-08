@@ -30,6 +30,7 @@ You can also wrap tagdata in an unslug tag pair.
 | group_sort | Sort order for Status Group names | ASC | ASC, DESC
 | status_sort | Sort order for Statuses using native status_order property | ASC | ASC, DESC
 | separator | Character to use as separator in returned slug variable | - |
+| limit | Set limit on how many statuses are returned | 100 |
 
 ####Variables
 {group_id}<br>
